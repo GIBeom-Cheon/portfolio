@@ -1,0 +1,89 @@
+@font-face {
+  font-family: "GmarketSansLight";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansLight.woff")
+    format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "GmarketSansMedium";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff")
+    format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "GmarketSansBold";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansBold.woff")
+    format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+:root {
+  --main-color: #bb2649;
+  --sub1-color: #836157;
+  --sub2-color: #f8a4a4;
+  --sub3-color: #ee5f73;
+  --sub4-color: #de828d;
+  --sub5-color: #f5d2ce;
+  --sub6-color: #7a3c31;
+  --sub7-color: #6b3238;
+
+  width: 100vw;
+  height: 100vh;
+}
+.homeContainer {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  .homeImgBox {
+    border: 2px solid var(--main-color);
+    padding: 1.2%;
+    cursor: pointer;
+    svg {
+      width: 500px;
+      height: 500px;
+      text {
+        font-size: 70px;
+      }
+    }
+  }
+
+  .stroke {
+    stroke: var(--main-color);
+    stroke-width: 2px;
+    stroke-dasharray: 560px;
+    animation: stroke 5s infinite;
+    fill: none;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+  }
+  @keyframes stroke {
+    25% {
+      stroke-dashoffset: 560px;
+      fill: #000;
+    }
+    50% {
+      stroke-dashoffset: 0px;
+    }
+  }
+
+  .mainText {
+    position: absolute;
+    left: 50%;
+    top: 30%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 5vw;
+    text-align: center;
+    font-family: "Pacifico";
+    letter-spacing: 3px;
+    line-height: 1.2;
+  }
+}

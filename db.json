@@ -1,0 +1,42 @@
+{
+  "react": [
+    {
+      "id": 0,
+      "img": "https://via.placeholder.com/150",
+      "title": "프로젝트 1 ㅎㅎㅎ",
+      "skill": 18900,
+      "desc": true,
+      "tool": true,
+      "link": ["XS", "S", "M", "L"]
+    },
+    {
+      "id": 1,
+      "img": "https://via.placeholder.com/150",
+      "title": "프로젝트 2 ㅎㅎㅎ",
+      "skill": 17900,
+      "desc": true,
+      "tool": true,
+      "link": ["S", "M", "L"]
+    }
+  ],
+	"web": [
+    {
+      "id": 0,
+      "img": "https://via.placeholder.com/150",
+      "title": "프로젝트 1 ㅎㅎㅎ",
+      "skill": 18900,
+      "desc": true,
+      "tool": true,
+      "link": ["XS", "S", "M", "L"]
+    },
+    {
+      "id": 1,
+      "img": "https://via.placeholder.com/150",
+      "title": "프로젝트 2 ㅎㅎㅎ",
+      "skill": 17900,
+      "desc": true,
+      "tool": true,
+      "link": ["S", "M", "L"]
+    }
+  ]
+}

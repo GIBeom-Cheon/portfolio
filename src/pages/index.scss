@@ -1,0 +1,39 @@
+.logoPageDiv {
+  font-family: GmarketSansLight;
+  color: rgba(255, 255, 255, 0.7);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 95vh;
+  font-size: 70px;
+  .textBox {
+    border: 2px solid white;
+    padding: 2%;
+  }
+  .blindSpace {
+    color: black;
+  }
+  .introTitle,
+  .highlight {
+    color: var(--main-color);
+    font-family: GmarketSansBold;
+  }
+}
+
+.introTitle:after {
+  content: "|";
+  display: inline-block;
+  font-size: 70px;
+  animation: moveCursor 500ms infinite;
+}
+
+@keyframes moveCursor {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+  }
+}

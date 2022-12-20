@@ -1,0 +1,266 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;200;300;400;500;600;700;800;900&display=swap');
+body, html {scroll-behavior: smooth;}
+body {cursor: none;}
+.cursor{
+    width: 40px; height: 40px; 
+    background-image:url(../images/cursor.png); 
+    border-radius: 10px; 
+    position: fixed; left: 0; top: 0; 
+    z-index: 999; 
+    transition: background-color .2s, border-color .2s, border-radius .2s, transform .6s
+}
+
+/* 헤더 */
+header {
+    max-width:1200px; min-width:375px;
+    margin:0 auto; padding:0 16px;
+}
+
+#h_bg {width:100%; height:70px; position:fixed; left:0; top:0; z-index:900;}
+#h_bg header { margin:0 auto; height:100%; display:flex; justify-content: center;}
+#h_bg header nav {display:flex; animation:nav 1s 1s forwards; opacity: 0; align-self:flex-end; text-align: end;}
+#h_bg header nav a {
+    display:inline-block; padding-right:80px;
+    font-family: 'Roboto Slab', serif; font-size:1.125rem; font-weight:700;
+}
+#h_bg header nav a:hover {color:rgb(242, 170, 76);}
+#h_bg header nav a:last-child {padding-right:0;}
+
+
+@keyframes nav {
+    0% {opacity:0; transform: translateY(-20px);}
+    100% {opacity:1; transform: translateY(0px);}
+}
+
+/* 메인 */
+.wrap {width:100%; overflow:hidden; position:relative;}
+.wrap .bg {
+    height:100vh;
+}
+.wrap .bg1 {
+    margin:0 auto; position:relative;
+    display:flex; flex-flow:column nowrap; padding-top:120px;
+}
+.wrap .bg1 video {}
+/* .wrap .bg1 .circle {width:100%;}
+.wrap .bg1 .circle img {
+    animation:circle01 10s linear infinite;
+    display:inline-block; z-index:900;
+    position:absolute; left:46.5%; bottom:3%;
+} */
+.wrap .bg1 .txt {
+    position:absolute; z-index:800; left:50%; top:47%; transform: translate(-50%,-50%); text-align:center;
+    animation:main_txt2 0.5s 1s forwards; opacity:0;
+}
+.wrap .bg1 .txt p {font-size:4.5rem; color:#fff; font-family: 'Roboto Slab', serif; font-weight:900; animation:main_txt 0.8s 1s ;}
+.wrap .bg1 .txt p:first-child {margin-bottom:15px;}
+.wrap .bg1 .arrow {
+    animation:arrow2 0.5s 1s forwards; opacity:0;
+    display:flex; justify-content: center;
+    margin-top:70px;
+}
+.wrap .bg1 .arrow img {animation:arrow 0.8s 1s infinite alternate;}
+
+.wrap2 {position: relative;}
+.wrap .bg2 {
+    height:450px; padding:30px; display:flex; flex-flow:column nowrap; justify-content: center;
+}
+.wrap .bg2 p {
+    text-align: center; font-size:2.5rem; padding-bottom:20px;
+    letter-spacing:-0.05rem; font-weight:600; color:#000; opacity:0;
+}
+.wrap .bg2 p:nth-child(1) {}
+.wrap .bg2 p:nth-child(2) {text-shadow: -1px 0px #f2aa4c, 0px 1px #f2aa4c, 1px 0px #f2aa4c, 0px -1px #f2aa4c; color:#fff; font-size: 3.0rem;}
+.wrap .bg2 p:nth-child(3) {}
+.wrap .bg2 p:nth-child(4) {padding-bottom:0;}
+.wrap2 .wave {
+    background-image:url(../images/wave06.png); height:300px;
+    overflow: hidden; white-space: nowrap;
+    animation:rolling_typo_01  120s linear infinite;
+    position:relative; left:0; top:70%;
+    background-size:cover; background-position:center;
+}
+.wrap2 .typo {
+    background-image:url(../images/typo02.png); height:180px;
+    overflow: hidden; white-space: nowrap;
+    animation:rolling_typo_02  120s linear infinite;
+    position:relative; left:0; top:70%;
+    background-size:cover; background-position:center;
+}
+.wrap .bg3 {height:100%; width:1200px; margin:120px auto; padding:0 16px; opacity:0;}
+.wrap .bg3 > h1 {
+    font-family: 'Roboto Slab', serif; font-weight:900; font-size:3.0rem; margin-bottom:70px; text-align: center; position:relative;
+    z-index:800;
+}
+.wrap .bg3 > h1 > span {
+    display:inline-block; width:60px; height:60px; background:rgba(0, 40, 130, 0.6); border-radius:50%;
+    position:absolute; left:35%; top:-50%; z-index:700;
+    animation: heartbeat 1.5s ease-in-out infinite both;
+}
+.wrap .bg3 .web {margin:0 0 100px;}
+.wrap .bg3 .web h1 {font-family: 'Roboto Slab', serif; padding:20px 0;  font-size:1.3rem; color:#000; font-weight: 700;}
+.wrap .bg3 .web .project {display:flex; flex-flow:row nowrap; justify-content: space-between; align-items: center;}
+/* 프로젝트 이미지 배경이미지 부분 */
+.wrap .bg3 .web .project .img {height:300px; width:500px; background-size:cover; background-position:center top;}
+.wrap .bg3 .web .project .img1 {background-image:url(../images/bb.jpg)}
+.wrap .bg3 .web .project .img2 {background-image:url(../images/dsme.jpg)}
+.wrap .bg3 .web .project .img3 {background-image:url(../images/team_app.jpg)}
+.wrap .bg3 .web .project .content {width:calc(100% - 500px); padding-left:20px;}
+.wrap .bg3 .web .project .content dl {display:flex; flex-flow:row wrap;}
+.wrap .bg3 .web .project .content dl dt {
+    width:25%; padding:10px 0; font-weight: 700; color:#000;
+}
+.wrap .bg3 .web .project .content dl dd {width:75%; padding:10px 0; line-height:1.5;}
+.wrap .bg3 .web .project .content .link {display:flex; flex-flow:row wrap; margin-top:50px;}
+.wrap .bg3 .web .project .content .link a {font-family: 'Roboto Slab', serif; background:#002882; border:2px solid #002882; color:#fff; border-radius:7px; margin-bottom:5px; margin-right:5px; padding:10px; transition:all 0.3s;}
+.wrap .bg3 .web .project .content .link a:hover {border:2px solid #f2aa4c; color:#f2aa4c; background:#fff;}
+
+/* 첫번째 디자인 프로젝트 */
+.wrap .bg4 {height:100%; width:1200px; margin:120px auto; padding:0 16px; opacity:0;}
+.wrap .bg4 > h1 {font-family: 'Roboto Slab', serif; font-weight:900; font-size:3.0rem; margin-bottom:70px; text-align: center; position:relative;}
+.wrap .bg4 > h1 > span {
+    display:inline-block; width:60px; height:60px; background:rgba(0, 40, 130, 0.6); border-radius:50%;
+    position:absolute; left:40%; top:-50%; z-index:700;
+    animation: heartbeat 1.5s ease-in-out infinite both;
+}
+.wrap .bg4 .project_design h1 {font-family: 'Roboto Slab', serif; padding:20px 0;  font-size:1.3rem; color:#000; font-weight: 700;}
+.wrap .bg4 .project_design h1 span {font-size:1.125rem; font-weight:600;}
+.wrap .bg4 .project_design .design1 {display:flex; flex-flow:row wrap; justify-content:space-between; margin-bottom:50px;}
+.wrap .bg4 .project_design .design1 a {height:300px; width:500px; margin:10px; background-size:cover; background-position:center top; border:1px solid #f5f5f5;transition:all 0.5s; display:inline-block;}
+.wrap .bg4 .project_design .design1 a:hover {transform:scale(1.05);}
+.wrap .bg4 .project_design .design1 a:nth-child(1) {background-image:url(../images/laro_mockup.jpg)}
+.wrap .bg4 .project_design .design1 a:nth-child(2) {background-image:url(../images/ikea_mockup.jpg)}
+.wrap .bg4 .project_design .design1 a:nth-child(3) {background-image:url(../images/ben_mockup.jpg)}
+.wrap .bg4 .project_design .design1 a:nth-child(4) {background-image:url(../images/dwk_mockup.jpg)}
+.wrap .bg4 .project_design .design1 a:nth-child(5) {background-image:url(../images/fijiwater_mockup.jpg)}
+.wrap .bg4 .project_design .design1 a:nth-child(6) {background-image:url(../images/grove_mockup.jpg)}
+/* 두번째 디자인 프로젝트  */
+.wrap .bg4 .project_design .design2 {display:flex; flex-flow:row wrap; justify-content:space-between; margin-bottom:50px;}
+.wrap .bg4 .project_design .design2 a {height:300px; width:300px; margin:10px; background-size:cover; background-position:center top; border:1px solid #f5f5f5; transition:all 0.5s;}
+.wrap .bg4 .project_design .design2 a:hover {transform:scale(1.05);}
+.wrap .bg4 .project_design .design2 a:nth-child(1) {background-image:url(../images/sns_santa.jpg)}
+.wrap .bg4 .project_design .design2 a:nth-child(2) {background-image:url(../images/tableware_sns.jpg)}
+.wrap .bg4 .project_design .design2 a:nth-child(3) {background-image:url(../images/travel.jpg)}
+.wrap .bg4 .project_design .design2 a:nth-child(4) {background-image:url(../images/sns_starb.jpg)}
+.wrap .bg4 .project_design .design2 a:nth-child(5) {background-image:url(../images/sns_mara.jpg)}
+.wrap .bg4 .project_design .design2 a:nth-child(6) {background-image:url(../images/sns_mong.jpg)}
+.wrap .bg4 .project_design .design2 a:nth-child(7) {background-image:url(../images/lancome.jpg)}
+.wrap .bg4 .project_design .design2 a:nth-child(8) {background-image:url(../images/vans.jpg)}
+.wrap .bg4 .project_design .design2 a:nth-child(9) {background-image:url(../images/cosmetic02.jpg)}
+/* 세번째 디자인 프로젝트 */
+.wrap .bg4 .project_design .design3 {display:flex; flex-flow:row wrap; justify-content:space-between;}
+.wrap .bg4 .project_design .design3 a {height:200px; width:350px; margin:10px; background-size:cover; background-position:center top; border:1px solid #f5f5f5; transition:all 0.5s;}
+.wrap .bg4 .project_design .design3 a:hover {transform:scale(1.05);}
+.wrap .bg4 .project_design .design3 a:nth-child(1) {background-image:url(../images/bobbi_brown_banner_main02_desktop.jpg)}
+.wrap .bg4 .project_design .design3 a:nth-child(2) {background-image:url(../images/bobbi_brown_banner_main03_desktop.jpg)}
+.wrap .bg4 .project_design .design3 a:nth-child(3) {background-image:url(../images/bobbi_brown_banner_main04_desktop.jpg)}
+/* about */
+#wrap5 {width:1200px; margin:0 auto; padding:150px 0 100px 0; display:flex; flex-flow:column nowrap; align-items: center; height:100vh; opacity:0;}
+#wrap5 > h1 {font-family: 'Roboto Slab', serif; font-weight:900; font-size:3.0rem; margin-bottom:50px; text-align: center; position:relative;}
+#wrap5 > h1 > span {
+    display:inline-block; width:60px; height:60px; background:rgba(0, 40, 130, 0.6); border-radius:50%;
+    position:absolute; left:-24%; top:-50%; z-index:700;
+    animation: heartbeat 1.5s ease-in-out infinite both;
+}
+#wrap5 .bg5 {display:flex; border:1px solid #c9c9c9; padding:50px; border-radius:10px; }
+.swiper-container {
+    width:300px; 
+    height:400px;
+    margin-right:80px; text-align: center;
+} 
+.swiper-slide {
+    background-size:cover;
+    background-position:right center;
+}
+.slide1 {background-image:url(../images/intro01.jpg)}
+.slide2 {background-image:url(../images/intro02.jpg)}
+#wrap5 .bg5 .info {}
+#wrap5 .bg5 .info h1 {font-size:2rem; font-weight:600; font-family: 'Roboto Slab', serif;}
+#wrap5 .bg5 .info p {}
+#wrap5 .bg5 .info .keywords {color:#002882; font-size:1.25rem; font-weight: 600; margin:30px 0;}
+#wrap5 .bg5 .info .content {letter-spacing:-0.05rem; line-height:1.7; font-weight: 400; font-size:0.9rem;}
+#wrap5 .bg5 .info .c1 {}
+#wrap5 .bg5 .info .c2 {margin:25px 0;}
+#wrap5 .bg5 .info .c3 {margin-bottom:25px;}
+#wrap5 .bg5 .info .c4 {}
+#wrap5  a {
+    display:block; background:#002882; color:#fff; font-family: 'Roboto Slab', serif; width:250px; height:50px;
+    text-align: center; line-height: 50px; border-radius:10px; margin-top:40px; border:2px solid #002882;  transition:all 0.3s;
+}
+#wrap5  a:hover {border:2px solid #f2aa4c; color:#f2aa4c; background:#fff;}
+
+/* animation */
+.wrap .ani1 {animation:ani 1s both}
+.wrap .ani2 {animation:ani 1s both 0.1s}
+.wrap .ani3 {animation:ani 1s both 0.2s}
+.wrap .ani4 {animation:ani 1s both 0.3s}
+.wrap .bg34 {animation:bg34 1s forwards}
+.bg5 {animation:bg5 1s both}
+
+@keyframes ani {
+    0% {transform:translateY(100px); opacity:0;}
+    100% {transform:translateY(0px); opacity:1;}
+}
+@keyframes bg34 {
+    0% {transform:translateY(200px); opacity:0;}
+    100% {transform:translateY(80px); opacity:1;}
+}
+@keyframes bg5 {
+    0% {transform:translateY(200px); opacity:0;}
+    100% {transform:translateY(0px); opacity:1;}
+}
+@keyframes arrow {
+    0% {transform:translateY(0);}
+    100% {transform:translateY(-30px);}
+}
+@keyframes circle01 {
+    0% {transform:rotate(0);}
+    100% {transform:rotate(360deg);}
+}
+@keyframes circle02 {
+    0% {opacity:0;}
+    100% {opacity:1;}
+}
+@keyframes arrow2 {
+    0% {opacity:0;}
+    100% {opacity:1;}
+}
+@keyframes heartbeat {
+    from {
+        transform: scale(1.0);
+        transform-origin: center center;
+        animation-timing-function: ease-out;
+    }
+    10% {
+        transform: scale(0.91);
+        animation-timing-function: ease-in;
+    }
+    17% {
+        transform: scale(0.98);
+        animation-timing-function: ease-out;
+    }
+    33% {
+        transform: scale(0.87);
+        animation-timing-function: ease-in;
+    }
+    45% {
+        transform: scale(1.0);
+        animation-timing-function: ease-out;
+    }
+}
+@keyframes main_txt {
+    0% {transform:translateY(50px);}
+    100% {transform:translateY(0);}
+}
+@keyframes main_txt2 {
+    0% {opacity:0;}
+    100% {opacity:1;}
+}
+@keyframes rolling_typo_01 {
+    0% {background-position-x:0;} /* 특정방향으로만 움직일때 x또는 y붙여서 사용가능 */
+    100% {background-position:-10000px;} /* 이미지 사이즈에 따라서 값을 더 크게 해주기 */
+}
+@keyframes rolling_typo_02 {
+    0% {background-position-x:0;} /* 특정방향으로만 움직일때 x또는 y붙여서 사용가능 */
+    100% {background-position:10000px;} /* 이미지 사이즈에 따라서 값을 더 크게 해주기 */
+}
